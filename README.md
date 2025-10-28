@@ -1,8 +1,8 @@
-# MarocTrip - Assistant Intelligent pour le Tourisme au Maroc 🌟
+# 🔥 RAG System - Assistant Intelligent avec Gemini
 
-Une application combinant un chatbot intelligent avec un système RAG (Retrieval Augmented Generation) pour fournir des informations précises sur les voyages et services touristiques au Maroc.
+Un système RAG (Retrieval Augmented Generation) réutilisable qui combine un chatbot intelligent avec une base de connaissances personnalisable. Ce système peut être adapté à n'importe quel domaine ou cas d'usage nécessitant des réponses précises basées sur vos propres documents.
 
-##  Prérequis
+## 📋 Prérequis
 
 - Docker Desktop
 - Clé API Gemini (Google AI)
@@ -10,12 +10,12 @@ Une application combinant un chatbot intelligent avec un système RAG (Retrieval
 - Node.js ≥ 20.9.0 (pour le développement local)
 - Python 3.10+ (pour le développement local)
 
-##  Installation
+## 🚀 Installation
 
 1. **Cloner le projet**
    ```bash
-   git clone https://github.com/Abdelilah04116/RAG_Dockerise
-   cd RAG_Dockerise
+   git clone <votre-repo>
+   cd rag-system
    ```
 
 2. **Configuration de l'environnement**
@@ -34,7 +34,7 @@ Une application combinant un chatbot intelligent avec un système RAG (Retrieval
    docker-compose up --build
    ```
 
-##  Accès aux Services
+## 🌐 Accès aux Services
 
 Une fois lancé, vous pouvez accéder aux différents services :
 
@@ -42,10 +42,10 @@ Une fois lancé, vous pouvez accéder aux différents services :
 - **API Backend** : http://localhost:8000
 - **ChromaDB** : http://localhost:8001
 
-##  Structure du Projet
+## 📁 Structure du Projet
 
 ```
-MarocTrip/
+project/
 ├── frontend/               # Interface utilisateur Next.js
 │   ├── src/
 │   │   └── app/           # Pages et composants
@@ -61,27 +61,41 @@ MarocTrip/
     └── docker-compose.yml
 ```
 
-##  Fonctionnalités
+## 🛠 Fonctionnalités
 
-- **Chat Interface**
-  - Interface utilisateur moderne et responsive
-  - Support multilingue (Français/Anglais)
-  - Upload de documents en temps réel
+- **Interface moderne et réutilisable**
+  - UI responsive et personnalisable
+  - Support multilingue intégré
+  - Upload et indexation de documents en temps réel
 
-- **Système RAG**
-  - Support des formats PDF, DOCX, TXT
+- **Système RAG Puissant**
+  - Support multi-formats : PDF, DOCX, TXT
   - Indexation automatique des documents
-  - Recherche sémantique avec ChromaDB
-  - Génération de réponses avec Gemini
+  - Recherche sémantique performante avec ChromaDB
+  - Génération de réponses contextuelles avec Gemini
+  - Facilement adaptable à différents cas d'usage
 
-##  API Endpoints
+## 📑 API Endpoints
 
-- `POST /ask` - Poser une question
-- `POST /upload` - Uploader un document
-- `POST /index` - Réindexer les documents
+- `POST /ask` - Poser une question à la base de connaissances
+- `POST /upload` - Uploader un nouveau document
+- `POST /index` - Réindexer la base de documents
 - `GET /history` - Historique des conversations
 
-##  Développement Local
+## 🔧 Personnalisation et Adaptation
+
+Le système est conçu pour être facilement adaptable :
+
+1. **Personnalisation du domaine**
+   - Ajoutez vos propres documents dans `/RAG/data/raw_documents/`
+   - Adaptez les prompts dans `rag_engine.py`
+   - Personnalisez l'interface selon vos besoins
+
+2. **Modification du modèle de langage**
+   - Actuellement utilise Gemini, mais peut être adapté pour d'autres LLMs
+   - Structure modulaire facilitant l'intégration d'autres modèles
+
+## 🔧 Développement Local
 
 Pour développer localement sans Docker :
 
@@ -106,12 +120,12 @@ Pour développer localement sans Docker :
    docker run -p 8001:8000 chromadb/chroma
    ```
 
-##  Variables d'Environnement
+## ⚙️ Variables d'Environnement
 
 - `GEMINI_API_KEY` - Clé API pour Google Gemini
 - `NEXT_PUBLIC_API_URL` - URL de l'API backend (par défaut: http://localhost:8000)
 
-##  Contribution
+## 📝 Contribution
 
 1. Fork le projet
 2. Créer une branche (`git checkout -b feature/AmazingFeature`)
@@ -119,17 +133,17 @@ Pour développer localement sans Docker :
 4. Push vers la branche (`git push origin feature/AmazingFeature`)
 5. Ouvrir une Pull Request
 
-##  Support
+## 👥 Support
 
 Pour toute question ou problème :
 - Ouvrir une issue sur GitHub
 - Contacter l'équipe de support
 
-##  Licence
+## 📄 Licence
 
 Ce projet est sous licence MIT - voir le fichier [LICENSE.md](LICENSE.md) pour plus de détails.
 
-##  Remerciements
+## 🙏 Remerciements
 
 - Google Gemini pour l'API
 - L'équipe ChromaDB
@@ -142,6 +156,7 @@ Développé avec ❤️ par [Abdelilah Ourti](https://github.com/abdelilah04116)
 --------------------
 
 ## information sur l'Auteur 
+
 **Abdelilah Ourti**
 
 [![Email](https://img.shields.io/badge/Email-Contact-red)](mailto:abdelilahourti@gmail.com)
