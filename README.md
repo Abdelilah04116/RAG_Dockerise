@@ -14,8 +14,8 @@ Une application combinant un chatbot intelligent avec un système RAG (Retrieval
 
 1. **Cloner le projet**
    ```bash
-   git clone <votre-repo>
-   cd MarocTrip
+   git clone https://github.com/Abdelilah04116/RAG_Dockerise
+   cd RAG_Dockerise
    ```
 
 2. **Configuration de l'environnement**
@@ -138,3 +138,13 @@ Ce projet est sous licence MIT - voir le fichier [LICENSE.md](LICENSE.md) pour p
 ---
 
 Développé avec ❤️ par [Abdelilah Ourti](https://github.com/abdelilah04116)
+
+--------------------
+
+## information sur l'Auteur 
+**Abdelilah Ourti**
+
+[![Email](https://img.shields.io/badge/Email-Contact-red)](mailto:abdelilahourti@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/abdelilah-ourti-a529412a8)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black)](https://github.com/abdelilah04116)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-orange)](https://abdelilah04116.github.io/)
