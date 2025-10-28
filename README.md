@@ -1,8 +1,8 @@
-# 🔥 RAG System - Assistant Intelligent avec Gemini
+#  RAG System - Assistant Intelligent avec Gemini
 
 Un système RAG (Retrieval Augmented Generation) réutilisable qui combine un chatbot intelligent avec une base de connaissances personnalisable. Ce système peut être adapté à n'importe quel domaine ou cas d'usage nécessitant des réponses précises basées sur vos propres documents.
 
-## 📋 Prérequis
+##  Prérequis
 
 - Docker Desktop
 - Clé API Gemini (Google AI)
@@ -10,7 +10,7 @@ Un système RAG (Retrieval Augmented Generation) réutilisable qui combine un ch
 - Node.js ≥ 20.9.0 (pour le développement local)
 - Python 3.10+ (pour le développement local)
 
-## 🚀 Installation
+##  Installation
 
 1. **Cloner le projet**
    ```bash
@@ -34,7 +34,7 @@ Un système RAG (Retrieval Augmented Generation) réutilisable qui combine un ch
    docker-compose up --build
    ```
 
-## 🌐 Accès aux Services
+##  Accès aux Services
 
 Une fois lancé, vous pouvez accéder aux différents services :
 
@@ -42,7 +42,7 @@ Une fois lancé, vous pouvez accéder aux différents services :
 - **API Backend** : http://localhost:8000
 - **ChromaDB** : http://localhost:8001
 
-## 📁 Structure du Projet
+##  Structure du Projet
 
 ```
 project/
@@ -61,7 +61,7 @@ project/
     └── docker-compose.yml
 ```
 
-## 🛠 Fonctionnalités
+##  Fonctionnalités
 
 - **Interface moderne et réutilisable**
   - UI responsive et personnalisable
@@ -75,14 +75,14 @@ project/
   - Génération de réponses contextuelles avec Gemini
   - Facilement adaptable à différents cas d'usage
 
-## 📑 API Endpoints
+##  API Endpoints
 
 - `POST /ask` - Poser une question à la base de connaissances
 - `POST /upload` - Uploader un nouveau document
 - `POST /index` - Réindexer la base de documents
 - `GET /history` - Historique des conversations
 
-## 🔧 Personnalisation et Adaptation
+##  Personnalisation et Adaptation
 
 Le système est conçu pour être facilement adaptable :
 
@@ -95,7 +95,7 @@ Le système est conçu pour être facilement adaptable :
    - Actuellement utilise Gemini, mais peut être adapté pour d'autres LLMs
    - Structure modulaire facilitant l'intégration d'autres modèles
 
-## 🔧 Développement Local
+##  Développement Local
 
 Pour développer localement sans Docker :
 
@@ -120,12 +120,12 @@ Pour développer localement sans Docker :
    docker run -p 8001:8000 chromadb/chroma
    ```
 
-## ⚙️ Variables d'Environnement
+##  Variables d'Environnement
 
 - `GEMINI_API_KEY` - Clé API pour Google Gemini
 - `NEXT_PUBLIC_API_URL` - URL de l'API backend (par défaut: http://localhost:8000)
 
-## 📝 Contribution
+##  Contribution
 
 1. Fork le projet
 2. Créer une branche (`git checkout -b feature/AmazingFeature`)
@@ -133,22 +133,21 @@ Pour développer localement sans Docker :
 4. Push vers la branche (`git push origin feature/AmazingFeature`)
 5. Ouvrir une Pull Request
 
-## 👥 Support
+##  Support
 
 Pour toute question ou problème :
 - Ouvrir une issue sur GitHub
 - Contacter l'équipe de support
 
-## 📄 Licence
+##  Licence
 
 Ce projet est sous licence MIT - voir le fichier [LICENSE.md](LICENSE.md) pour plus de détails.
 
-## 🙏 Remerciements
+##  Remerciements
 
 - Google Gemini pour l'API
 - L'équipe ChromaDB
-- Tous les contributeurs
-
+- Docker
 ---
 
 Développé avec ❤️ par [Abdelilah Ourti](https://github.com/abdelilah04116)
