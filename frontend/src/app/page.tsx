@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ReactMarkdown from 'react-markdown';
 
 type ChatMessage = {
   role: "user" | "assistant";
@@ -20,7 +21,7 @@ export default function ChatPage() {
     {
       role: "assistant",
       content:
-        "Salut 👋 Je suis MarocTrips. Je peux vous aider avec vos questions sur le Maroc en utilisant notre base de connaissances.",
+        "Salut 👋 Je suis RAG Assistant Cree par Abdelilah Ourti . Je peux vous aider avec vos questions sur vos Document (Text,PDF,DOC,JSON ....)",
       time: new Date().toLocaleTimeString([], {
         hour: "2-digit",
         minute: "2-digit",
@@ -135,16 +136,16 @@ export default function ChatPage() {
           {/* Bloc gauche : logo + textes */}
           <div className="flex items-start gap-3">
             <div className="w-10 h-10 rounded-full bg-gradient-to-r from-pink-500 via-purple-600 to-blue-600 flex items-center justify-center text-white text-xs font-semibold shadow">
-              MT
+              RA
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
                 <span className="text-sm font-semibold bg-gradient-to-r from-pink-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-                  MarocTrips
+                  RAG Assistant
                 </span>
               </div>
               <span className="text-[11px] text-gray-500 leading-snug">
-                Excursions désert · Transferts privés · Riads partenaires
+                PDF · DOCX · TXT · JSON
               </span>
             </div>
           </div>
@@ -193,7 +194,7 @@ export default function ChatPage() {
               {/* avatar assistant côté gauche */}
               {msg.role === "assistant" && (
                 <div className="w-9 h-9 rounded-full bg-gradient-to-r from-pink-500 via-purple-600 to-blue-600 text-white flex items-center justify-center text-[10px] font-semibold mr-3 shadow">
-                  MT
+                  RA
                 </div>
               )}
 
@@ -206,7 +207,9 @@ export default function ChatPage() {
                       : "bg-gray-100 text-gray-700 rounded-bl-none border border-gray-200"
                   }`}
                 >
-                  {msg.content}
+                  <ReactMarkdown className="prose prose-sm max-w-none">
+                    {msg.content}
+                  </ReactMarkdown>
                 </div>
 
                 <div
@@ -232,10 +235,10 @@ export default function ChatPage() {
           {loading && (
             <div className="flex items-end justify-start">
               <div className="w-9 h-9 rounded-full bg-gradient-to-r from-pink-500 via-purple-600 to-blue-600 text-white flex items-center justify-center text-[10px] font-semibold mr-3 shadow">
-                MT
+                RA
               </div>
               <div className="bg-gray-100 text-gray-500 px-4 py-2 rounded-xl shadow-md text-sm italic border border-gray-200 rounded-bl-none">
-                ...je prépare une offre pour toi
+                ...je recherche dans la base de connaissances
               </div>
             </div>
           )}
@@ -245,7 +248,7 @@ export default function ChatPage() {
         <footer className="border-t border-gray-200 bg-gray-50 p-4 flex items-center gap-3">
           <input
             type="text"
-            placeholder="Décris ton besoin. Exemple: 'On est 2, on veut 1 nuit désert depuis Marrakech samedi matin'"
+            placeholder="Décris ton besoin. Exemple:'donner l'information à partir de document'"
             className="flex-1 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             value={input}
             onChange={(e) => setInput(e.target.value)}
