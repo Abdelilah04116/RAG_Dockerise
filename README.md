@@ -1,3 +1,8 @@
+[![Email](https://img.shields.io/badge/Email-Contact-red)](mailto:abdelilahourti@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/abdelilah-ourti-a529412a8)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black)](https://github.com/abdelilah04116)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-orange)](https://abdelilah04116.github.io/)
+
 #  RAG System - Assistant Intelligent avec Gemini
 
 Un système RAG (Retrieval Augmented Generation) réutilisable qui combine un chatbot intelligent avec une base de connaissances personnalisable. Ce système peut être adapté à n'importe quel domaine ou cas d'usage nécessitant des réponses précises basées sur vos propres documents.
