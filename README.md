@@ -19,8 +19,8 @@ Un système RAG (Retrieval Augmented Generation) réutilisable qui combine un ch
 
 1. **Cloner le projet**
    ```bash
-   git clone <votre-repo>
-   cd rag-system
+   git clone https://github.com/Abdelilah04116/RAG_Dockerise
+   cd RAG_Dockerise
    ```
 
 2. **Configuration de l'environnement**
@@ -167,3 +167,4 @@ Développé avec ❤️ par [Abdelilah Ourti](https://github.com/abdelilah04116)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/abdelilah-ourti-a529412a8)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-black)](https://github.com/abdelilah04116)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit-orange)](https://abdelilah04116.github.io/)
+
