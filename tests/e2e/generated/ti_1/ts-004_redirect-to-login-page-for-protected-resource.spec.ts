@@ -6,7 +6,7 @@
  * Story:     TI-1
  * Scenario:  Redirect to Login Page for Protected Resource
  * ID:        TS-004
- * Generated: 2026-02-13T14:30:22.841035+00:00
+ * Generated: 2026-02-13T14:33:41.986197+00:00
  * Generator: Jira QA AI Generator (Agentic Pipeline)
  * 
  * Pipeline:  Story → AC → Scenarios → AutomationEngineer → CodeReviewer → GitOps
