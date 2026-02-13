@@ -4,9 +4,9 @@
  * =============================================================================
  * 
  * Story:     TI-1
- * Scenario:  Successful User Login
- * ID:        TS-001
- * Generated: 2026-02-13T14:30:22.837468+00:00
+ * Scenario:  Redirect to Login Page for Protected Resource
+ * ID:        TS-004
+ * Generated: 2026-02-13T14:30:22.841035+00:00
  * Generator: Jira QA AI Generator (Agentic Pipeline)
  * 
  * Pipeline:  Story → AC → Scenarios → AutomationEngineer → CodeReviewer → GitOps
@@ -19,15 +19,16 @@
 
 import { test, expect } from '@playwright/test';
 
-test('Successful User Login', async ({ page }) => {
-  // User enters valid username and password
+test('Redirect to Login Page for Protected Resource', async ({ page }) => {
+  // User is redirected to the login page
+  await page.goto('/protected');
+  await expect(page.getByRole('heading', { name: 'Login' })).toBeVisible();
+
+  // User enters valid credentials to access the protected resource
   await page.getByLabel('Username').fill('validuser');
   await page.getByLabel('Password').fill('validpassword');
-  await page.getByRole('button', { name: 'Login' }).click();
+  await page.getByRole('button', { name: 'Submit' }).click();
 
-  // Expect: User is logged in successfully
-  await expect(page.getByText('Welcome to the Dashboard')).toBeVisible();
-
-  // User is redirected to the dashboard
-  await expect(page.url()).toContain('/dashboard');
+  // Expect: User is granted access to the protected resource
+  await expect(page.getByText('Welcome to the protected page')).toBeVisible();
 });

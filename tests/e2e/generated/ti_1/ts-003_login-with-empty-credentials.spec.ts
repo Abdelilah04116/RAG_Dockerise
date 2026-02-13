@@ -6,7 +6,7 @@
  * Story:     TI-1
  * Scenario:  Login with Empty Credentials
  * ID:        TS-003
- * Generated: 2026-02-13T14:26:03.126634+00:00
+ * Generated: 2026-02-13T14:30:22.838491+00:00
  * Generator: Jira QA AI Generator (Agentic Pipeline)
  * 
  * Pipeline:  Story → AC → Scenarios → AutomationEngineer → CodeReviewer → GitOps
@@ -20,10 +20,12 @@
 import { test, expect } from '@playwright/test';
 
 test('Login with Empty Credentials', async ({ page }) => {
-  // User clicks the login button with empty credentials
+  // User clicks the login button
   await page.getByRole('button', { name: 'Login' }).click();
 
-  // Expect: An error message is displayed indicating the username and password are required, and the user is not logged in
+  // Expect: User sees an error message indicating username and password are required
   await expect(page.getByText('Username and password are required')).toBeVisible();
-  await expect(page.url()).not.toContain('/dashboard');
+
+  // User remains on the login page
+  await expect(page.url()).toContain('/login');
 });

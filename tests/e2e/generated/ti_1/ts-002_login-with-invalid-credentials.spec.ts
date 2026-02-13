@@ -6,7 +6,7 @@
  * Story:     TI-1
  * Scenario:  Login with Invalid Credentials
  * ID:        TS-002
- * Generated: 2026-02-13T14:26:03.126634+00:00
+ * Generated: 2026-02-13T14:30:22.838491+00:00
  * Generator: Jira QA AI Generator (Agentic Pipeline)
  * 
  * Pipeline:  Story → AC → Scenarios → AutomationEngineer → CodeReviewer → GitOps
@@ -20,17 +20,14 @@
 import { test, expect } from '@playwright/test';
 
 test('Login with Invalid Credentials', async ({ page }) => {
-  // Given the user is on the login page
-  await page.goto('/login');
-
-  // When the user enters invalid username and password
+  // Given User enters invalid username and password
   await page.getByLabel('Username').fill('invaliduser');
   await page.getByLabel('Password').fill('invalidpassword');
-  await page.getByRole('button', { name: 'Login' }).click();
+  await page.getByRole('button', { name: 'Sign In' }).click();
 
-  // Then an error message is displayed indicating the credentials are invalid
-  await expect(page.getByText('Invalid credentials')).toBeVisible();
+  // Then User sees an error message indicating invalid credentials
+  await expect(page.getByText('Invalid username or password')).toBeVisible();
 
-  // And the user is not logged in
-  await expect(page.getByRole('button', { name: 'Logout' })).not.toBeVisible();
+  // And User remains on the login page
+  await expect(page.url()).toContain('/login');
 });
