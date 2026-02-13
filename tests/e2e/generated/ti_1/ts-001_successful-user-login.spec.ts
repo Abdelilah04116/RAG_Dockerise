@@ -6,7 +6,7 @@
  * Story:     TI-1
  * Scenario:  Successful User Login
  * ID:        TS-001
- * Generated: 2026-02-13T14:25:46.493255+00:00
+ * Generated: 2026-02-13T14:26:03.124575+00:00
  * Generator: Jira QA AI Generator (Agentic Pipeline)
  * 
  * Pipeline:  Story → AC → Scenarios → AutomationEngineer → CodeReviewer → GitOps
